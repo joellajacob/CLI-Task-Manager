@@ -3,7 +3,6 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import { log } from "console";
 
 //manually create __dirname (since not supported by ES Module)
 const __filename = fileURLToPath(import.meta.url);
@@ -106,9 +105,6 @@ const viewTasks = async () =>{
     }
     console.log("Tasks:");
     console.table(arr);
-    // for(let i=0;i<arr.length;i++){
-    //     console.log(`${i+1}. ${arr[i]["task"]} --> ${arr[i]["done"]}`);
-    // }
     r1.prompt();
 }
 
